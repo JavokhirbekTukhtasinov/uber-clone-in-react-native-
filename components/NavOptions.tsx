@@ -3,7 +3,8 @@ import React from 'react';
 import tw from 'twrnc'
 import {Icon} from 'react-native-elements'
 
-const NavOptions = () => {
+
+const NavOptions = ({navigation}: any) => {
     const data = [
         {
             id: 1,
@@ -24,7 +25,7 @@ const NavOptions = () => {
             horizontal
             data={data}
             renderItem={({ item }) => (
-                <TouchableOpacity style={tw`p-2 pl-8 pt-4 bg-gray-200 m-2 w-40`}>
+                <TouchableOpacity onPress={() => navigation.navigate(item.screen)} style={tw`p-2 pl-8 pt-4 bg-gray-200 m-2 w-40`}>
                     <View>
                         <Image
                             style={{ width: 120, height: 120, resizeMode: 'contain' }}

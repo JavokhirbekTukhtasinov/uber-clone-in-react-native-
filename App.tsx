@@ -6,6 +6,8 @@ import { Provider } from 'react-redux';
 import 'react-native-gesture-handler'
 import { NavigationContainer } from '@react-navigation/native';
 
+
+
 const App = () => {
   return (
     <Provider store={store}>
@@ -15,7 +17,6 @@ const App = () => {
     </Provider>
   );
 };
-
 
 export default App;
 const styles = StyleSheet.create({});
